@@ -8,5 +8,11 @@ RSpec.describe Gratitudes do
     result = gratitudes.format
     expect(result).to eq "Be grateful for: bread, water"
   end
+
+  it "returns 'Be grateful for: ' when passed ''" do
+    gratitudes = Gratitudes.new
+    result = gratitudes.format
+    expect(result).to eq "Be grateful for: "
+  end
 end
     
